@@ -201,7 +201,7 @@ const AdvancedQuestionOptions = ({ item, parentArray }: AdvancedQuestionOptionsP
                                         }}
                                     />
                                 </FormField>
-                                <FormField label={t('max answers')}>
+                                <FormField label={t('Max answers')}>
                                     <input
                                         type="number"
                                         defaultValue={maxOccurs}

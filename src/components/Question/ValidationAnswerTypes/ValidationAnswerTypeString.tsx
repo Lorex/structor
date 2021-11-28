@@ -31,26 +31,29 @@ const ValidationAnswerTypeString = ({ item }: Props): JSX.Element => {
         },
         {
             display: t('National identity number'),
-            code:
-                '^((((0[1-9]|[12]\\d|3[01])([04][13578]|[15][02]))|((0[1-9]|[12]\\d|30)([04][469]|[15]1))|((0[1-9]|[12]\\d)([04]2)))|((([0-7][1-9]|[12]\\d|3[01])(0[13578]|1[02]))|(([0-7][1-9]|[12]\\d|30)(0[469]|11))|(([0-7][1-9]|[12]\\d)(02))))\\d{7}$',
+            code: '^[a-zA-Z][0-9]{9}$',
         },
         {
             display: t('Telefonnummer'),
-            code: '^((\\+|00)(\\d{1,3}))?\\d{5,12}$',
+            code: '^(d{2,3}-?|(d{2,3}))d{3,4}-?d{4}$',
         },
         {
-            display: t('Only norwegian characters'),
-            code: '^[æøåÆØÅa-zA-Z ]*$',
+            display: t('Mobile phone number'),
+            code: '^09d{2}(d{6}|-?d{3}-?d{3})$',
         },
         {
-            display: t('Only norwegian characters + hyphen and space (used for names)'),
-            code: '^[æøåÆØÅa-zA-Z\\- ]*$',
+            display: t('Only English characters'),
+            code: '^[a-zA-Z ]*$',
         },
         {
-            display: t('Only norwegian characters with line breaks'),
-            code: '^(?:[æøåÆØÅa-zA-Z0-9,.!?@()+\\-\\/*]|[ \r\n\t])*$',
+            display: t('Only English characters + hyphen and space (used for names)'),
+            code: '^[a-zA-Z\\- ]*$',
         },
-        { display: t('Zip code'), code: '^(000[1-9]|0[1-9][0-9][0-9]|[1-9][0-9][0-9][0-8])$' },
+        {
+            display: t('Only English characters with line breaks'),
+            code: '^(?:[a-zA-Z0-9,.!?@()+\\-\\/*]|[ \r\n\t])*$',
+        },
+        { display: t('Zip code'), code: '^[0-9]{3,3}|[0-9]{5,5}|[0-9]{6,6}$' },
     ];
 
     const updateMaxLength = (number: number) => {
@@ -145,7 +148,7 @@ const ValidationAnswerTypeString = ({ item }: Props): JSX.Element => {
                         }}
                     />
                 </FormField>
-                <FormField label={t('Maksimum antall tegn')}>
+                <FormField label={t('Maximum characters')}>
                     <input
                         defaultValue={item.maxLength || ''}
                         type="number"

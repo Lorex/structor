@@ -1,6 +1,6 @@
 import { ValueSet } from '../types/fhir';
 
-export const predefinedValueSetUri = 'http://ehelse.no/fhir/ValueSet/Predefined';
+export const predefinedValueSetUri = 'https://hapi.fhir.tw/fhir/ValueSet/Predefined';
 
 export const initPredefinedValueSet = [
     {
@@ -9,9 +9,9 @@ export const initPredefinedValueSet = [
         id: '1101',
         version: '1.0',
         name: 'urn:oid:1101',
-        title: 'Ja / Nei (structor)',
+        title: '是 / 否 (問卷產生器)',
         status: 'draft',
-        publisher: 'NHN',
+        publisher: 'Sitatech',
         compose: {
             include: [
                 {
@@ -19,11 +19,11 @@ export const initPredefinedValueSet = [
                     concept: [
                         {
                             code: '1',
-                            display: 'Ja',
+                            display: '是',
                         },
                         {
                             code: '2',
-                            display: 'Nei',
+                            display: '否',
                         },
                     ],
                 },

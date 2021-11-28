@@ -48,7 +48,7 @@ const Navbar = ({ showFormFiller, setValidationErrors, validationErrors }: Props
     };
 
     const getFileName = (): string => {
-        let technicalName = state.qMetadata.name || 'skjema';
+        let technicalName = state.qMetadata.name || '問卷';
         technicalName = technicalName.length > 40 ? technicalName.substring(0, 40) + '...' : technicalName;
         const version = state.qMetadata.version ? `-v${state.qMetadata.version}` : '';
         if (state.qAdditionalLanguages && Object.values(state.qAdditionalLanguages).length < 1) {
@@ -144,13 +144,13 @@ const Navbar = ({ showFormFiller, setValidationErrors, validationErrors }: Props
                             title={t('Choices')}
                             onClick={() => callbackAndHide(() => setShowContained(!showContained))}
                         />
-                        {i18n.language !== 'nb-NO' ? (
+                        {i18n.language !== 'zh-TW' ? (
                             <Btn
-                                title={t('Change to norwegian')}
+                                title={t('切換至正體中文')}
                                 onClick={() =>
                                     callbackAndHide(() => {
-                                        i18n.changeLanguage('nb-NO');
-                                        localStorage.setItem('editor_language', 'nb-NO');
+                                        i18n.changeLanguage('zh-TW');
+                                        localStorage.setItem('editor_language', 'zh-TW');
                                     })
                                 }
                             />

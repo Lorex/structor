@@ -7,17 +7,18 @@ import {
 import { Languages, TreeState } from '../store/treeStore/treeStore';
 import { isValidId } from './MetadataHelper';
 
-export const INITIAL_LANGUAGE: Language = { code: 'nb-NO', display: 'Norsk Bokmål', localDisplay: 'Norsk bokmål' };
+export const INITIAL_LANGUAGE: Language = {
+    code: 'zh-TW',
+    display: '正體中文 (台灣)',
+    localDisplay: '正體中文 (台灣)',
+};
 
 export const supportedLanguages: Language[] = [
     INITIAL_LANGUAGE,
-    { code: 'nn-NO', display: 'Nynorsk', localDisplay: 'Norsk nynorsk' },
-    { code: 'se-NO', display: 'Samisk', localDisplay: 'Davvisámegillii' },
-    { code: 'en-GB', display: 'Engelsk', localDisplay: 'English' },
-    { code: 'pl-PL', display: 'Polsk', localDisplay: 'Polskie' },
-    { code: 'ro-RO', display: 'Rumensk', localDisplay: 'Română' },
-    { code: 'lt-LT', display: 'Litauisk', localDisplay: 'Lietuvis' },
-    { code: 'ru-RU', display: 'Russisk', localDisplay: 'русский' },
+    { code: 'zh-TW', display: '正體中文 (台灣)', localDisplay: '正體中文' },
+    { code: 'en-GB', display: '英文', localDisplay: '英文' },
+    { code: 'vi-VN', display: '越南文', localDisplay: '越南文' },
+    { code: 'es-ES', display: '西班牙文', localDisplay: '西班牙文' },
 ];
 
 export const getLanguageFromCode = (languageCode: string): Language | undefined => {

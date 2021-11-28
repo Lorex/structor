@@ -37,7 +37,7 @@ const QuestionnaireSettings = (): JSX.Element => {
 
     return (
         <Accordion title={t('Questionnaire settings')}>
-            <FormField label={t('Helsenorge endpoint')}>
+            {/* <FormField label={t('Helsenorge endpoint')}>
                 <InputField
                     placeholder={t('For example Endpoint/35')}
                     defaultValue={
@@ -57,7 +57,7 @@ const QuestionnaireSettings = (): JSX.Element => {
                         }
                     }}
                 />
-            </FormField>
+            </FormField> */}
             <FormField label={t('Button bar display')}>
                 <RadioBtn
                     onChange={(newValue: string) => {
