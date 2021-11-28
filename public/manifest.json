@@ -1,6 +1,6 @@
 {
-  "short_name": "表單產生器",
-  "name": "表單產生器",
+  "short_name": "FHIR 問卷產生器",
+  "name": "FHIR 問卷產生器",
   "icons": [
     {
       "src": "favicon.ico",
