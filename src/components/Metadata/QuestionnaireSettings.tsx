@@ -15,7 +15,7 @@ import { IExtentionType, IValueSetSystem } from '../../types/IQuestionnareItemTy
 import SwitchBtn from '../SwitchBtn/SwitchBtn';
 import { removeQuestionnaireExtension, setQuestionnaireExtension } from '../../helpers/extensionHelper';
 import RadioBtn from '../RadioBtn/RadioBtn';
-import InputField from '../InputField/inputField';
+// import InputField from '../InputField/inputField';
 
 const QuestionnaireSettings = (): JSX.Element => {
     const { t } = useTranslation();
